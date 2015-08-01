@@ -1,0 +1,2 @@
+# IntrinsicMarket
+Financial Management app
