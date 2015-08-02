@@ -60,12 +60,12 @@ a:hover {
 
 .navbar-trans {
 	background-color:#2b2b2b;
-    color:#cdcdcd;
-    border-width:0;
+  color:#cdcdcd;
+  border-width:0;
 }
 
 .navbar-trans .navbar-brand, .navbar-trans >.container-fluid .navbar-brand {
-    padding: 14px;
+    /*padding: 14px;*/
     color: #d4200c;
 }
 
@@ -214,4 +214,8 @@ footer .nav>li>a:hover {
   border-radius: 30%;
   height: 100px;
   width: 100px;
+}
+
+.test {
+  border-radius: 0;
 }
