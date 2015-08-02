@@ -4,8 +4,14 @@ var app = angular.module('intrinsic', ['ngRoute'])
 
 		$routeProvider
 	  		.when('/', {
-	  			templateUrl: '/index.html',
+	  			templateUrl: '/main.html',
 	  			controller: 'indexCtrl'	
 	  		})
+	  		.when('/main', {
+	  			templateUrl: '/test.html'
+	  		})
+	  		.otherwise({
+		  		redirectTo: '/'
+		  	})
 
 	});

@@ -27,6 +27,7 @@ $('a[href*=#]:not([href=#])').click(function() {
         setTimeout(function(){
             target.find('.animated').removeClass("animated");
         },2000);
+
         
         return false;
       }
