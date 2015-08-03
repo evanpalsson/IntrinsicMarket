@@ -1,4 +1,5 @@
 var express = require('express');
+var routes = require('routes');
 var app = express();
 var path = require('path');
 var request = require('request');
@@ -19,32 +20,15 @@ var request = require('request');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.use(express.static(__dirname + '/public'));
+
+// app.get('/', routes.index);
+// app.get('*', routes.index);
+
+
+
+
+
 
 app.listen(8001)
 console.log("server working on port 8001")

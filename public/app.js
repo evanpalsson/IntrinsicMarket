@@ -1,14 +1,15 @@
-var app = angular.module('intrinsic', ['ngRoute'])
+var app = angular.module('intrinsic', ['ngRoute', 'ngResource'])
 
-	app.config(function($routeProvider){
+	app.config(function($routeProvider, $locationProvider){
 
+		// $locationProvider.html5Mode(true);
 		$routeProvider
 	  		.when('/', {
 	  			templateUrl: '/main.html',
 	  			controller: 'indexCtrl'	
 	  		})
-	  		.when('/main', {
-	  			templateUrl: '/test.html'
+	  		.when('/statements', {
+	  			templateUrl: '/statements.html'
 	  		})
 	  		.otherwise({
 		  		redirectTo: '/'
