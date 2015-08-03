@@ -1,18 +1,18 @@
-var app = angular.module('intrinsic', ['ngRoute', 'ngResource'])
+var app = angular.module('intrinsic', ['ui.router']);
 
-	app.config(function($routeProvider, $locationProvider){
+	app.config(function($stateProvider, $urlRouterProvider){
 
-		// $locationProvider.html5Mode(true);
-		$routeProvider
-	  		.when('/', {
-	  			templateUrl: '/main.html',
-	  			controller: 'indexCtrl'	
-	  		})
-	  		.when('/statements', {
-	  			templateUrl: '/statements.html'
-	  		})
-	  		.otherwise({
-		  		redirectTo: '/'
-		  	})
+		$urlRouterProvider
+			.otherwise('/');
+
+		$stateProvider
+			.state('home', {
+				url: '/',
+				templateUrl: '/main.html'
+			})
+			.state('home.statements', {
+				url: '/statements',
+				templateUrl: '/statements.html'
+			})
 
 	});

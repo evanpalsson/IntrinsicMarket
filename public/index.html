@@ -14,86 +14,82 @@
 
     <!-- JavaScript additives -->
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js'></script>
+    
 
 </head>
 <body>
-    <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapsible">
-                    <span class="fa fa-university fa-lg"></span>
-                </button>
-                <a class="navbar-brand text-brand" href="#section1">Intrinsic Market</a>
-            </div>
-            <div class="navbar-collapse collapse" id="navbar-collapsible">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#section1">Home</a></li>
-                    <li><a href="#section2">About</a></li>
-                    <li><a href="#section4">Contact</a></li>
-                    <li><a href="#section5">Reviews</a></li>
-                    <li><a href="/statements">Help</a></li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <form class="navbar-form" role="search">
-                        <div class="form-group nav navbar-left">                        
-                            <button type="submit" class="btn btn-success form-control" ng-click='getSymbol()'>Submit</button>
-                        </div>
-                        <input type="text" class="form-control test" placeholder="Enter stock symbol">
-                    </form>
-                </ul> 
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#myModal"><i class="fa fa-university fa-lg"></i></a></li>
-                </ul>               
-            </div>            
-        </div>
-    </nav>
-
-
-        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <img src="/css/photos/flag.jpg" class="login-pic">
-                        <h2 class="text-center">Login</h2>
-                    </div>
-                    <div class="modal-body row">
-                        <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-                            <div class="form-group">
-                                <input type="text" class="form-control input-lg" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control input-lg" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-danger btn-lg btn-block">Sign In</button>
-                                <span class="pull-right"><a href="#/">Register</a></span>
-                                <span><a href="#/">Need help?</a></span>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        
-                    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <img src="/css/photos/flag.jpg" class="login-pic">
+                    <h2 class="text-center">Login</h2>
                 </div>
+                <div class="modal-body row">
+                    <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control input-lg" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-danger btn-lg btn-block">Sign In</button>
+                            <span class="pull-right"><a href="#/">Register</a></span>
+                            <span><a href="#/">Need help?</a></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer"></div>
             </div>
         </div>
+    </div>
 
+    <!-- Navbar -->
+        <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapsible">
+                        <span class="fa fa-university fa-lg"></span>
+                    </button>
+                    <a class="navbar-brand text-brand" href="#section1">Intrinsic Market</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-collapsible">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Contact</a></li>
+                        <li><a>Reviews</a></li>
+                        <li><a ui-sref=".statements">Statements</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <form class="navbar-form" role="search">
+                            <div class="form-group nav navbar-left">                        
+                                <button type="submit" class="btn btn-success form-control" ng-click='getSymbol()'>Submit</button>
+                            </div>
+                            <input type="text" class="form-control test" placeholder="Enter stock symbol">
+                        </form>
+                    </ul> 
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a data-toggle="modal" data-target="#myModal"><i class="fa fa-university fa-lg"></i></a></li>
+                    </ul>               
+                </div>            
+            </div>
+        </nav>
 
-    
+    <!-- View -->
+    <div ui-view></div>
 
     <!-- Project files -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-resource.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>    
     <script src='app.js'></script>
     <script src='indexCtrl.js'></script>
-    <script src="js/scripts.js"></script>
+    <!-- // <script src="js/scripts.js"></script> -->
+
 </body>
-    <!-- View -->
-    <ng-view></ng-view>
+   
 </html>
