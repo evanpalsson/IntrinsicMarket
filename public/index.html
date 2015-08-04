@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html ng-app="intrinsic" ng-controller='indexCtrl'>
+<html ng-app="intrinsic">
   <head>
     <meta charset="utf-8">
     <title>Intrinsic Market</title>
@@ -10,88 +9,60 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- JavaScript additives -->
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js'></script>
-    
 
 </head>
-<body>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <img src="/css/photos/flag.jpg" class="login-pic">
-                    <h2 class="text-center">Login</h2>
-                </div>
-                <div class="modal-body row">
-                    <form class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-                        <div class="form-group">
-                            <input type="text" class="form-control input-lg" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control input-lg" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-danger btn-lg btn-block">Sign In</button>
-                            <span class="pull-right"><a href="#/">Register</a></span>
-                            <span><a href="#/">Need help?</a></span>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer"></div>
+<body class="navBod">
+    <nav class="container-fluid navbar-fixed-top navbarIndex">
+        <div class="row">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li><a href="#">Link</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a>
+                            </li>
+                            <li><a href="#">Another action</a>
+                            </li>
+                            <li><a href="#">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <!-- Navbar -->
-        <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapsible">
-                        <span class="fa fa-university fa-lg"></span>
-                    </button>
-                    <a class="navbar-brand text-brand" href="#section1">Intrinsic Market</a>
-                </div>
-                <div class="navbar-collapse collapse" id="navbar-collapsible">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Contact</a></li>
-                        <li><a>Reviews</a></li>
-                        <li><a ui-sref=".statements">Statements</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <form class="navbar-form" role="search">
-                            <div class="form-group nav navbar-left">                        
-                                <button type="submit" class="btn btn-success form-control" ng-click='getSymbol()'>Submit</button>
-                            </div>
-                            <input type="text" class="form-control test" placeholder="Enter stock symbol">
-                        </form>
-                    </ul> 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a data-toggle="modal" data-target="#myModal"><i class="fa fa-university fa-lg"></i></a></li>
-                    </ul>               
-                </div>            
-            </div>
-        </nav>
-    
-    <!-- View -->
-    <div ui-view class="bod"></div>
+    <div class="view" ui-view></div>
 
-
-    <!-- Project files -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>    
+    <!-- JavaScript additives -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js'></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/imagesloaded.js"></script>
+    <script src="js/skrollr.js"></script>
+    <script src="js/main.js"></script>
     <script src='app.js'></script>
-    <script src='indexCtrl.js'></script>
-    <!-- // <script src="js/scripts.js"></script> -->
 
-</body>
-   
+</body>   
 </html>

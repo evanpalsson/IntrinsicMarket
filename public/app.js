@@ -8,7 +8,7 @@ var app = angular.module('intrinsic', ['ui.router']);
 		$stateProvider
 			.state('home', {
 				url: '/',
-				templateUrl: '/main.html'
+				templateUrl: '/statements.html'
 			})
 			.state('home.statements', {
 				url: '/statements',
